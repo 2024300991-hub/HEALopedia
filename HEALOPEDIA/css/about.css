@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #e0f2fe;
+    display: flex;
+    flex-direction: column;
+}
+
+.abt-navbar {
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 15px 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.abt-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.abt-logo-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.abt-logo-img {
+    height: 50px;
+}
+
+.abt-brand-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #004aad;
+}
+
+.abt-nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.abt-nav-btn {
+    background-color: #004aad;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 25px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.abt-nav-btn:hover {
+    background-color: #003380;
+    transform: translateY(-2px);
+}
+
+.abt-hero {
+    display: flex;
+    height: 320px;
+    background-color: #a3bde3;
+}
+
+.abt-hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.abt-impact-text {
+    font-family: Impact, sans-serif;
+    font-size: 60px;
+    letter-spacing: 2px;
+}
+
+.abt-welcome { font-size: 22px; font-weight: 700; }
+.abt-tagline { font-style: italic; font-size: 18px; }
+
+.abt-hero-right { flex: 1; }
+.abt-hero-right img { width: 100%; height: 100%; object-fit: cover; }
+
+.abt-mission-box {
+    max-width: 1200px;
+    margin: 45px auto;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.abt-team-banner {
+    background-color: #a3bde3;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.abt-team-section {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 80px;
+}
+
+.abt-card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 40px;
+}
+
+.abt-service-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.abt-card-image {
+    background-color: #89d4ff;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    width: 220px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    object-fit: cover;
+}
+
+.abt-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.abt-service-card h3 {
+    margin-top: 15px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.abt-service-card p {
+    font-style: italic;
+    font-weight: 700;
+    color: #444;
+}
+
+.abt-service-card:hover {
+    transform: translateY(-10px);
+}
+
+.abt-service-card:hover .abt-card-image {
+    background-color: #5baee5;
+    border-color: #004aad;
+}
+
+.abt-mini-sources {
+    width: 100%;
+    padding: 15px 40px;
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.abt-mini-container p {
+    font-size: 0.75rem; /* Sobrang liit na font */
+    color: #64748b;
+    line-height: 1.6;
+}
+
+.abt-mini-container strong {
+    color: #475569;
+    letter-spacing: 1px;
+    font-size: 0.7rem;
+}
+
+.abt-mini-container a {
+    color: #004aad;
+    text-decoration: none;
+    margin: 0 3px;
+    font-weight: 600;
+}
+
+.abt-mini-container a:hover {
+    color: #5b3cc4;
+    text-decoration: underline;
+}
+
+.abt-footer {
+    margin-top: 0; 
+}
+
+.abt-footer {
+    width: 100%;
+    padding: 25px 0;
+    background-color: #ffffff;
+    text-align: center;
+    border-top: 1px solid #eee;
+    margin-top: auto;
+}
+
+.abt-footer p {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #004aad;
+}
+
+@media (max-width: 900px) {
+    .abt-card-container { grid-template-columns: repeat(2, 1fr); }
+    .abt-hero { flex-direction: column; height: auto; }
+}

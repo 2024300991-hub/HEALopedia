@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HEALopedia – Detail</title>
+    <link rel="stylesheet" href="../css/core-services.css">
+    <link rel="stylesheet" href="../css/detail.css">
+</head>
+<body>
+    <div class="container">
+        <header class="banner">
+            <div class="logo">
+                <img src="../assets/logo.png" id="logo" alt="Logo">
+                <span>HEALopedia</span>
+            </div>
+            <div class="nav-buttons">
+                <button type="button" id="back-btn" onclick="history.back()">← Back</button>
+                <button type="button" onclick="window.location.href='core-services.html'">Core Services</button>
+                <button type="button" onclick="window.location.href='frontpage.html'">Home</button>
+                <button type="button" onclick="window.location.href='about.html'">About Us</button>
+            </div>
+            <button class="hamburger" onclick="toggleMobileMenu()">&#9776;</button>
+        </header>
+
+        <div class="mobile-menu hidden" id="mobile-menu">
+            <button onclick="history.back()">← Back</button>
+            <button onclick="window.location.href='core-services.html'">Core Services</button>
+            <button onclick="window.location.href='frontpage.html'">Home</button>
+            <button onclick="window.location.href='about.html'">About Us</button>
+        </div>
+
+        <main class="detail-main" id="detail-main">
+            <div class="detail-loading" id="detail-loading">
+                <div class="loading-spinner"></div>
+                <p>Loading...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/db.js"></script>
+    <script src="../js/detail.js"></script>
+</body>
+</html>

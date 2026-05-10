@@ -1,0 +1,268 @@
+/* ═══════════════════════════════════════════════════
+   DETAIL PAGE STYLES
+   ═══════════════════════════════════════════════════ */
+
+.detail-main {
+    margin: 40px 60px 60px;
+    min-height: 400px;
+}
+
+/* ── Loading state ── */
+.detail-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    gap: 16px;
+    color: #64748b;
+    font-size: 1rem;
+}
+
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #cbd5e1;
+    border-top-color: #004aad;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Error state ── */
+.detail-error {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    color: #ef4444;
+}
+
+.detail-error h2 { font-size: 1.4rem; margin-bottom: 10px; }
+.detail-error p  { color: #64748b; margin-bottom: 20px; }
+.detail-error a  {
+    display: inline-block;
+    background: #004aad;
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* ── Category badge ── */
+.detail-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 16px;
+    border-radius: 50px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.detail-badge.badge-medical  { background: #004aad; }
+.detail-badge.badge-common   { background: #059669; }
+.detail-badge.badge-rare     { background: #7c3aed; }
+.detail-badge.badge-medicine { background: #b45309; }
+
+/* ── MEDICAL TERM card ── */
+.detail-medical {
+    background: #fff;
+    border-radius: 24px;
+    padding: 40px 48px;
+    box-shadow: 0 4px 24px rgba(0,74,173,0.08);
+    max-width: 860px;
+}
+
+.detail-medical h1 {
+    font-size: 2.4rem;
+    color: rgb(15,15,125);
+    margin-bottom: 16px;
+    line-height: 1.15;
+}
+
+.detail-medical .definition {
+    font-size: 1.1rem;
+    color: #334155;
+    line-height: 1.7;
+    border-left: 4px solid #004aad;
+    padding-left: 18px;
+    margin-top: 8px;
+}
+
+/* ── SYMPTOM / MEDICINE card ── */
+.detail-card {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,74,173,0.08);
+}
+
+.detail-card-header {
+    display: flex;
+    gap: 36px;
+    padding: 40px 48px;
+    align-items: flex-start;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-card-img {
+    width: 260px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 18px;
+    flex-shrink: 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    background: #f1f5f9;
+}
+
+.detail-card-meta {
+    flex: 1;
+    min-width: 0;
+}
+
+.detail-card-meta h1 {
+    font-size: 2.2rem;
+    color: rgb(15,15,125);
+    margin-bottom: 14px;
+    line-height: 1.15;
+}
+
+.meta-row {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    margin-bottom: 8px;
+    font-size: 0.97rem;
+    color: #334155;
+    flex-wrap: wrap;
+}
+
+.meta-label {
+    font-weight: 700;
+    color: #1e293b;
+    flex-shrink: 0;
+}
+
+/* ── Body section (definition / info / medicine details) ── */
+.detail-card-body {
+    padding: 32px 48px 40px;
+}
+
+.detail-section {
+    margin-bottom: 28px;
+}
+
+.detail-section:last-child { margin-bottom: 0; }
+
+.detail-section h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #004aad;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e0f2fe;
+}
+
+.detail-section p,
+.detail-section .info-text {
+    font-size: 0.98rem;
+    color: #334155;
+    line-height: 1.75;
+}
+
+.detail-section ul {
+    list-style: disc;
+    padding-left: 24px;
+    margin: 8px 0 0;
+}
+
+.detail-section ul li {
+    font-size: 0.97rem;
+    color: #334155;
+    line-height: 1.55;
+    margin-bottom: 8px;
+    padding-left: 4px;
+}
+
+/* Important info box */
+.important-box {
+    background: #fff7ed;
+    border: 1.5px solid #fdba74;
+    border-radius: 14px;
+    padding: 16px 20px;
+    font-size: 0.95rem;
+    color: #92400e;
+    line-height: 1.6;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.important-box::before {
+    content: '⚠';
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+/* ── "Also in this category" breadcrumb ── */
+.detail-breadcrumb {
+    margin-bottom: 24px;
+    font-size: 0.88rem;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.detail-breadcrumb a {
+    color: #004aad;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.detail-breadcrumb a:hover { text-decoration: underline; }
+.detail-breadcrumb span { color: #94a3b8; }
+
+/* ── Mobile ── */
+@media (max-width: 900px) {
+    .detail-main { margin: 20px 16px 40px; }
+
+    .detail-card-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 24px 20px;
+        gap: 20px;
+    }
+
+    .detail-card-img {
+        width: 100%;
+        max-width: 320px;
+        height: 200px;
+    }
+
+    .detail-card-meta h1 { font-size: 1.6rem; }
+    .detail-card-body    { padding: 20px 20px 28px; }
+
+    .detail-medical { padding: 28px 20px; }
+    .detail-medical h1 { font-size: 1.7rem; }
+
+    .meta-row { font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+    .detail-card-meta h1 { font-size: 1.35rem; }
+    .detail-section h3   { font-size: 0.92rem; }
+    .detail-badge        { font-size: 0.7rem; }
+}

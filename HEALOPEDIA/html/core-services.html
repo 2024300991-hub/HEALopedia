@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Core Services – HEALopedia</title>
+    <link rel="stylesheet" href="../css/core-services.css">
+</head>
+<body>
+    <div class="container">
+        <header class="banner">
+            <div class="logo">
+                <img src="../assets/logo.png" id="logo" alt="Logo">
+                <span>HEALopedia</span>
+            </div>
+
+            <!-- Desktop search bar -->
+            <div class="search-bar">
+                <div class="search-wrapper">
+                    <input type="search" id="main-search" placeholder="🔍 Search terms, symptoms, medicines…" autocomplete="off">
+                    <div id="search-dropdown" class="search-dropdown hidden"></div>
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button type="button" onclick="window.location.href='main.html'">Back to Main Page</button>
+                <button type="button" onclick="window.location.href='frontpage.html'">Home</button>
+                <button type="button" onclick="window.location.href='about.html'">About us</button>
+            </div>
+
+            <!-- Hamburger for mobile -->
+            <button class="hamburger" id="hamburger" aria-label="Menu" onclick="toggleMobileMenu()">&#9776;</button>
+        </header>
+
+        <!-- Mobile nav drawer -->
+        <div class="mobile-menu hidden" id="mobile-menu">
+            <div class="mobile-search-bar">
+                <div class="search-wrapper">
+                    <input type="search" id="main-search-mobile" placeholder="🔍 Search…" autocomplete="off">
+                    <div id="search-dropdown-mobile" class="search-dropdown hidden"></div>
+                </div>
+            </div>
+            <button onclick="window.location.href='main.html'">Back to Main Page</button>
+            <button onclick="window.location.href='frontpage.html'">Home</button>
+            <button onclick="window.location.href='about.html'">About us</button>
+        </div>
+
+        <nav class="main-tabs">
+            <ul>
+                <li><a href="#" class="active" onclick="loadTab('medical', event)">MEDICAL TERMS</a></li>
+                <li><a href="#" onclick="loadTab('symptoms', event)">HEALTH SYMPTOMS</a></li>
+                <li><a href="#" onclick="loadTab('medicine', event)">MEDICINE</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-content" class="tab-body"></main>
+    </div>
+
+    <script src="../js/db.js"></script>
+    <script src="../js/core-services.js"></script>
+</body>
+</html>
