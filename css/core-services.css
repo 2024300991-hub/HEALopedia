@@ -461,72 +461,103 @@ body {
 /* ─── MOBILE RESPONSIVE ──────────────────────────── */
 @media (max-width: 900px) {
     .banner {
-        padding: 0 20px;
+        padding: 10px 20px;
         height: auto;
         min-height: 70px;
         flex-wrap: wrap;
         gap: 10px;
-        padding-top: 12px;
-        padding-bottom: 12px;
     }
 
-    .logo span { font-size: 1.3rem; }
-    #logo { height: 50px; }
+    .logo span { 
+        font-size: 1.3rem; 
+    }
+    
+    #logo { 
+        height: 45px; 
+    }
 
-    .search-bar { display: none; }
-    .nav-buttons { display: none; }
-    .hamburger { display: block; }
+    .search-bar, .nav-buttons { 
+        display: none; 
+    }
+    
+    .hamburger { 
+        display: block; 
+    }
 
     .main-tabs ul {
-        margin: 20px 16px 0;
-        gap: 6px;
+        margin: 15px 10px 0;
+        gap: 5px;
+        justify-content: center;
     }
 
     .main-tabs a {
-        padding: 10px 16px;
-        font-size: 0.78rem;
-        margin-right: 0;
+        padding: 8px 12px;
+        font-size: 0.75rem;
     }
 
     .tab-body {
-        margin: 0 16px 24px;
-        padding: 20px 16px;
-        border-radius: 0 16px 16px 16px;
+        margin: 0 10px 20px;
+        padding: 15px;
+        border-radius: 12px;
     }
-
-    .search-result-panel {
-        margin: 12px 16px 0;
-    }
-
-    .srp-inner { padding: 16px; }
 
     .entry-card {
         flex-direction: column;
         align-items: center;
+        text-align: center;
+        gap: 15px;
     }
 
     .entry-img {
         width: 100%;
-        max-width: 300px;
-        max-height: 200px;
+        max-width: 200px;
+        height: auto;
+        border-radius: 12px;
     }
 
-    .entry-content h2 { font-size: 1.4rem; }
+    .entry-content h2 { 
+        font-size: 1.2rem; 
+    }
+
+    .alphabet-selector { 
+        gap: 3px; 
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 
     .alpha-btn {
-        width: 30px;
-        height: 38px;
-        font-size: 0.75rem;
+        width: 28px;
+        height: 32px;
+        font-size: 0.7rem;
     }
-
-    .alphabet-selector { gap: 4px; margin-bottom: 20px; }
 }
 
 @media (max-width: 480px) {
-    .logo span { display: none; }
-    .main-tabs a { padding: 8px 10px; font-size: 0.72rem; }
-    .tab-body { padding: 14px 10px; }
-    .white-box { padding: 16px; border-radius: 16px; }
+    .logo span { 
+        display: none; 
+    }
+    
+    #logo {
+        height: 40px;
+    }
+
+    .main-tabs a { 
+        padding: 6px 8px; 
+        font-size: 0.7rem; 
+    }
+
+    .tab-body { 
+        padding: 10px; 
+    }
+
+    .white-box { 
+        padding: 12px; 
+        border-radius: 12px; 
+    }
+    
+    .entry-img {
+        max-width: 160px;
+    }
 }
 
 /* ─── SEARCH REDIRECT & HIGHLIGHT ───────────────────────────────────────────── */
