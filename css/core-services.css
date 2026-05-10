@@ -12,7 +12,7 @@ body {
     flex-direction: column;
 }
 
-
+/* ─── BANNER ─────────────────────────────────────── */
 .banner {
     width: 100%;
     height: 100px;
@@ -460,59 +460,51 @@ body {
 
 /* ─── MOBILE RESPONSIVE ──────────────────────────── */
 @media (max-width: 900px) {
-    .banner {
-        padding: 10px 15px;
-        flex-direction: row;
-        justify-content: space-between;
+      .banner {
+        padding: 10px 20px;
         height: auto;
-    }
-
-    #logo { 
-        height: 40px; 
+        min-height: 70px;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .logo span { 
-        font-size: 1.1rem; 
-        display: inline-block;
+        font-size: 1.3rem; 
+    }
+    
+    #logo { 
+        height: 45px; 
     }
 
-    .nav-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
+    .search-bar, .nav-buttons { 
+        display: none; 
     }
-
-    .nav-buttons button {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-        width: 100%;
+    
+    .hamburger { 
+        display: block; 
     }
 
     .main-tabs ul {
-        margin: 15px 5px 0;
-        gap: 4px;
-        overflow-x: auto;
-        justify-content: flex-start;
-        display: flex;
+        margin: 15px 10px 0;
+        gap: 5px;
+        justify-content: center;
     }
 
     .main-tabs a {
         padding: 8px 12px;
-        font-size: 0.7rem;
-        white-space: nowrap;
+        font-size: 0.75rem;
     }
 
     .tab-body {
         margin: 0 10px 20px;
         padding: 15px;
         border-radius: 12px;
-        text-align: left;
     }
 
     .entry-card {
         flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
+        align-items: center;
+        text-align: center;
         gap: 15px;
     }
 
@@ -521,55 +513,51 @@ body {
         max-width: 200px;
         height: auto;
         border-radius: 12px;
-        align-self: center;
     }
 
-    .alphabet-selector {
-        gap: 5px;
-        padding: 10px;
-        display: flex;
-        flex-wrap: wrap;
+    .entry-content h2 { 
+        font-size: 1.2rem; 
+    }
+
+    .alphabet-selector { 
+        gap: 3px; 
         justify-content: center;
+        flex-wrap: wrap;
     }
 
     .alpha-btn {
-        width: 32px;
+        width: 28px;
         height: 32px;
-        font-size: 0.75rem;
+        font-size: 0.7rem;
     }
 }
 
 @media (max-width: 480px) {
     .logo span { 
-        display: inline-block;
-        font-size: 0.9rem; 
+        display: none; 
+    }
+    
+    #logo {
+        height: 40px;
     }
 
-    #logo { 
-        height: 30px; 
+    .main-tabs a { 
+        padding: 6px 8px; 
+        font-size: 0.7rem; 
     }
 
-    .tab-body {
-        padding: 10px;
-        text-align: left;
+    .tab-body { 
+        padding: 10px; 
     }
 
-    .white-box {
-        padding: 12px;
-        text-align: left;
+    .white-box { 
+        padding: 12px; 
+        border-radius: 12px; 
     }
-
-    .entry-content {
-        text-align: left;
-        width: 100%;
+    
+    .entry-img {
+        max-width: 160px;
     }
-
-    .alpha-btn {
-        width: 28px;
-        height: 28px;
-        font-size: 0.7rem;
-    }
-}
 
 /* ─── SEARCH REDIRECT & HIGHLIGHT ───────────────────────────────────────────── */
 
