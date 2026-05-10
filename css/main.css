@@ -154,54 +154,58 @@ body {
         grid-template-columns: repeat(2, 1fr);
         padding: 30px;
     }
-    
-    .banner {
-        padding: 0 30px;
-    }
 }
 
 @media (max-width: 600px) {
     .banner {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-        gap: 15px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 15px;
+        height: 70px;
     }
 
     #logo {
-        height: 50px;
+        height: 35px;
     }
 
     .logo span {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
 
     .nav-buttons {
-        width: 100%;
-        justify-content: center;
+        gap: 5px;
     }
 
     .nav-buttons button {
-        padding: 8px 20px;
-        font-size: 0.9rem;
+        padding: 6px 12px;
+        font-size: 0.75rem;
     }
 
     .content-area {
-        padding: 30px 20px;
+        padding: 20px 15px;
     }
 
     .card-container {
         grid-template-columns: 1fr;
         padding: 20px;
-        gap: 20px;
+        gap: 15px;
     }
 
     .card-image {
-        padding: 15px;
+        padding: 10px;
+        max-width: 150px;
+        margin: 0 auto;
+    }
+
+    .card-image img {
+        width: 60%;
+    }
+
+    .service-card h3 {
+        font-size: 0.9rem;
     }
 
     .footer p {
-        font-size: 0.8rem;
-        padding: 0 10px;
+        font-size: 0.7rem;
     }
 }
