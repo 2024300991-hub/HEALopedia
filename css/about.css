@@ -228,94 +228,61 @@ body {
 }
 
 @media (max-width: 900px) {
-    .abt-navbar {
+    .banner, .abt-navbar, .header {
         padding: 10px 15px;
-    }
-
-    .abt-nav-container {
-        flex-direction: row;
+        display: flex;
         justify-content: space-between;
-    }
-
-    .abt-logo-section {
-        gap: 5px;
-    }
-
-    .abt-brand-name {
-        font-size: 1.2rem;
-        display: inline-block;
-    }
-
-    .abt-logo-img {
-        height: 35px;
-    }
-
-    .abt-nav-btn {
-        padding: 6px 12px;
-        font-size: 0.75rem;
-        gap: 5px;
-    }
-
-    .abt-hero {
-        flex-direction: column;
+        align-items: center;
         height: auto;
+        min-height: 65px;
     }
 
-    .abt-hero-left {
-        padding: 30px 15px;
+    .logo, .abt-logo-section {
+        display: flex;
+        align-items: center;
+        gap: 6px;
     }
 
-    .abt-impact-text {
-        font-size: 35px;
+    .logo span, .abt-brand-name { 
+        font-size: 1.5rem; 
+        font-weight: 800;
+        display: inline-block;
+        color: #004aad;
+    }
+    
+    #logo, .abt-logo-img { 
+        height: 42px;
+        width: auto;
     }
 
-    .abt-card-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-        padding: 0 15px;
+    .nav-buttons, .abt-nav-links {
+        display: flex;
+        gap: 8px;
     }
 
-    .abt-card-image {
-        width: 160px;
+    .nav-buttons button, .abt-nav-btn {
+        padding: 6px 14px;
+        font-size: 0.8rem;
+        border-radius: 20px;
+        white-space: nowrap;
     }
 }
 
-@media (max-width: 600px) {
-    .abt-brand-name {
-        font-size: 1rem;
-        display: inline-block;
+@media (max-width: 480px) {
+    .logo span, .abt-brand-name { 
+        font-size: 1.25rem;
     }
 
-    .abt-logo-section {
-        gap: 4px;
+    #logo, .abt-logo-img {
+        height: 35px;
     }
 
-    .abt-nav-btn {
+    .nav-buttons, .abt-nav-links {
+        gap: 5px;
+    }
+
+    .nav-buttons button, .abt-nav-btn {
         padding: 5px 10px;
         font-size: 0.7rem;
-    }
-
-    .abt-mission-box {
-        padding: 0 20px;
-        text-align: center;
-        font-size: 0.95rem;
-        margin: 25px auto;
-    }
-
-    .abt-card-container {
-        grid-template-columns: 1fr;
-        justify-items: center;
-    }
-
-    .abt-card-image {
-        width: 150px;
-    }
-
-    .abt-footer p {
-        font-size: 0.75rem;
-    }
-
-    .abt-mini-sources {
-        text-align: center;
     }
 }
