@@ -185,7 +185,7 @@ body {
 }
 
 .abt-mini-container p {
-    font-size: 0.75rem; /* Sobrang liit na font */
+    font-size: 0.75rem; 
     color: #64748b;
     line-height: 1.6;
 }

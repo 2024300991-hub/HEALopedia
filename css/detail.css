@@ -1,13 +1,9 @@
-/* ═══════════════════════════════════════════════════
-   DETAIL PAGE STYLES
-   ═══════════════════════════════════════════════════ */
 
 .detail-main {
     margin: 40px 60px 60px;
     min-height: 400px;
 }
 
-/* ── Loading state ── */
 .detail-loading {
     display: flex;
     flex-direction: column;
@@ -30,7 +26,6 @@
 
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* ── Error state ── */
 .detail-error {
     background: #fff;
     border-radius: 20px;
@@ -51,7 +46,7 @@
     font-weight: 700;
 }
 
-/* ── Category badge ── */
+
 .detail-badge {
     display: inline-flex;
     align-items: center;
@@ -71,7 +66,6 @@
 .detail-badge.badge-rare     { background: #7c3aed; }
 .detail-badge.badge-medicine { background: #b45309; }
 
-/* ── MEDICAL TERM card ── */
 .detail-medical {
     background: #fff;
     border-radius: 24px;
@@ -96,7 +90,7 @@
     margin-top: 8px;
 }
 
-/* ── SYMPTOM / MEDICINE card ── */
+
 .detail-card {
     background: #fff;
     border-radius: 24px;
@@ -150,7 +144,7 @@
     flex-shrink: 0;
 }
 
-/* ── Body section (definition / info / medicine details) ── */
+
 .detail-card-body {
     padding: 32px 48px 40px;
 }
@@ -193,7 +187,7 @@
     padding-left: 4px;
 }
 
-/* Important info box */
+
 .important-box {
     background: #fff7ed;
     border: 1.5px solid #fdba74;
@@ -214,7 +208,7 @@
     margin-top: 1px;
 }
 
-/* ── "Also in this category" breadcrumb ── */
+
 .detail-breadcrumb {
     margin-bottom: 24px;
     font-size: 0.88rem;
@@ -234,7 +228,7 @@
 .detail-breadcrumb a:hover { text-decoration: underline; }
 .detail-breadcrumb span { color: #94a3b8; }
 
-/* ── Mobile ── */
+
 @media (max-width: 900px) {
     .detail-main { margin: 20px 16px 40px; }
 
