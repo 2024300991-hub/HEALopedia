@@ -228,6 +228,87 @@ body {
 }
 
 @media (max-width: 900px) {
-    .abt-card-container { grid-template-columns: repeat(2, 1fr); }
-    .abt-hero { flex-direction: column; height: auto; }
+    .abt-navbar {
+        padding: 10px 20px;
+    }
+
+    .abt-nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .abt-brand-name {
+        font-size: 1.4rem;
+        display: inline-block;
+    }
+
+    .abt-logo-img {
+        height: 40px;
+    }
+
+    .abt-hero {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .abt-hero-left {
+        padding: 40px 20px;
+    }
+
+    .abt-impact-text {
+        font-size: 40px;
+    }
+
+    .abt-card-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .abt-card-image {
+        width: 180px;
+    }
+}
+
+@media (max-width: 600px) {
+    .abt-brand-name {
+        font-size: 1.1rem;
+        display: inline-block;
+    }
+
+    .abt-nav-btn {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+
+    .abt-mission-box {
+        padding: 0 25px;
+        text-align: center;
+        font-size: 1rem;
+        margin: 30px auto;
+        line-height: 1.6;
+    }
+
+    .abt-card-container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .abt-card-image {
+        width: 160px;
+    }
+
+    .abt-service-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .abt-footer p {
+        font-size: 0.8rem;
+        padding: 0 10px;
+    }
+
+    .abt-mini-sources {
+        padding: 15px 20px;
+        text-align: center;
+    }
 }
