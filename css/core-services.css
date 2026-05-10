@@ -461,50 +461,58 @@ body {
 /* ─── MOBILE RESPONSIVE ──────────────────────────── */
 @media (max-width: 900px) {
     .banner {
-        padding: 10px 20px;
+        padding: 10px 15px;
+        flex-direction: row;
+        justify-content: space-between;
         height: auto;
-        min-height: 70px;
-        flex-wrap: wrap;
-        gap: 10px;
+    }
+
+    #logo { 
+        height: 40px; 
     }
 
     .logo span { 
-        font-size: 1.3rem; 
-    }
-    
-    #logo { 
-        height: 45px; 
+        font-size: 1.1rem; 
+        display: inline-block;
     }
 
-    .search-bar, .nav-buttons { 
-        display: none; 
+    .nav-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
     }
-    
-    .hamburger { 
-        display: block; 
+
+    .nav-buttons button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        width: 100%;
     }
 
     .main-tabs ul {
-        margin: 15px 10px 0;
-        gap: 5px;
-        justify-content: center;
+        margin: 15px 5px 0;
+        gap: 4px;
+        overflow-x: auto;
+        justify-content: flex-start;
+        display: flex;
     }
 
     .main-tabs a {
         padding: 8px 12px;
-        font-size: 0.75rem;
+        font-size: 0.7rem;
+        white-space: nowrap;
     }
 
     .tab-body {
         margin: 0 10px 20px;
         padding: 15px;
         border-radius: 12px;
+        text-align: left;
     }
 
     .entry-card {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
         gap: 15px;
     }
 
@@ -513,52 +521,56 @@ body {
         max-width: 200px;
         height: auto;
         border-radius: 12px;
+        align-self: center;
     }
 
-    .entry-content h2 { 
-        font-size: 1.2rem; 
-    }
-
-    .alphabet-selector { 
-        gap: 3px; 
-        justify-content: center;
+    .alphabet-selector {
+        gap: 5px;
+        padding: 10px;
+        display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .alpha-btn {
-        width: 28px;
+        width: 32px;
         height: 32px;
-        font-size: 0.7rem;
+        font-size: 0.75rem;
     }
 }
 
 @media (max-width: 480px) {
     .logo span { 
-        display: none; 
-    }
-    
-    #logo {
-        height: 40px;
+        display: inline-block;
+        font-size: 0.9rem; 
     }
 
-    .main-tabs a { 
-        padding: 6px 8px; 
-        font-size: 0.7rem; 
+    #logo { 
+        height: 30px; 
     }
 
-    .tab-body { 
-        padding: 10px; 
+    .tab-body {
+        padding: 10px;
+        text-align: left;
     }
 
-    .white-box { 
-        padding: 12px; 
-        border-radius: 12px; 
+    .white-box {
+        padding: 12px;
+        text-align: left;
     }
-    
-    .entry-img {
-        max-width: 160px;
+
+    .entry-content {
+        text-align: left;
+        width: 100%;
+    }
+
+    .alpha-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 0.7rem;
     }
 }
+
 /* ─── SEARCH REDIRECT & HIGHLIGHT ───────────────────────────────────────────── */
 
 /* Make search items act as proper links */
