@@ -179,19 +179,68 @@ function openEntryFromKeyboard(event, url) {
 }
 
 function renderEntryMeta(item) {
+
+    // =========================
+    // MEDICINES
+    // =========================
     if (currentTab === 'medicine') {
+
+        // Create short snippet
+        const shortDescription =
+            String(item.description || '')
+                .split('.')
+                .slice(0, 1)
+                .join('.') + '.';
+
         return `
             <div class="entry-meta">
-                <p><strong>Generic Name:</strong> ${escapeHTML(item.genericName || '')}</p>
-                <p><strong>Brand Names:</strong> ${escapeHTML(toList(item.brandNames).join(', ') || 'None listed')}</p>
-                <p><strong>Drug Class:</strong> ${escapeHTML(item.drugClass || 'Not listed')}</p>
-                <p><strong>Dosage Forms:</strong> ${escapeHTML(toList(item.dosageForms).join(', ') || 'Not listed')}</p>
-                <p><strong>Uses:</strong> ${escapeHTML(toList(item.uses).join(', ') || 'Not listed')}</p>
-                ${formatDetails(item.description || '')}
-                ${item.importantInformation ? `<p><strong>Important Information:</strong> ${escapeHTML(item.importantInformation)}</p>` : ''}
+
+                <p>
+                    <strong>Drug Class:</strong>
+                    ${escapeHTML(item.drugClass || 'Not listed')}
+                </p>
+
+                <p>
+                    <strong>Uses:</strong>
+                    ${escapeHTML(
+                        toList(item.uses)
+                            .slice(0, 2)
+                            .join(', ') || 'Not listed'
+                    )}
+                </p>
+
+                <p class="entry-snippet">
+                    ${escapeHTML(shortDescription)}
+                </p>
+
             </div>
         `;
     }
+
+    // =========================
+    // SYMPTOMS
+    // =========================
+    return `
+        <div class="entry-meta">
+
+            <p>
+                <strong>Definition:</strong>
+                ${escapeHTML(item.definition || '')}
+            </p>
+
+            <p class="entry-snippet">
+                ${
+                    escapeHTML(
+                        String(item.information || '')
+                            .replace(/\n/g, ' ')
+                            .slice(0, 180)
+                    )
+                }...
+            </p>
+
+        </div>
+    `;
+}
 
     return `
         <div class="entry-meta">

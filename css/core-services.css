@@ -667,3 +667,9 @@ a.search-item:focus .search-item-arrow {
     color: #004aad;
     transform: translateX(3px);
 }
+
+.entry-snippet {
+    margin-top: 10px;
+    color: #555;
+    line-height: 1.5;
+}
