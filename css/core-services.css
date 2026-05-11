@@ -558,6 +558,11 @@ body {
     .entry-img {
         max-width: 160px;
     }
+
+    .entry-snippet {
+        font-size: 0.85rem;
+        text-align: left;
+    }
 }
 /* ─── SEARCH REDIRECT & HIGHLIGHT ───────────────────────────────────────────── */
 
