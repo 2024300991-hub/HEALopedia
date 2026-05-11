@@ -242,15 +242,6 @@ function renderEntryMeta(item) {
     `;
 }
 
-    return `
-        <div class="entry-meta">
-            <p><strong>Name:</strong> ${escapeHTML(item.name || '')}</p>
-            <p><strong>Definition:</strong> ${escapeHTML(item.definition || '')}</p>
-            ${formatDetails(item.information || '')}
-        </div>
-    `;
-}
-
 function getSortedItems(items, titleFn) {
     return [...items].sort((a, b) =>
         (titleFn(a) || '').localeCompare(titleFn(b) || '')
