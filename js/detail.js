@@ -1,8 +1,3 @@
-// ═══════════════════════════════════════════════════════════════
-//  detail.js
-//  Reads URL params and renders full entry
-// ═══════════════════════════════════════════════════════════════
-
 window.onload = async () => {
     const main = document.getElementById('detail-main');
 
@@ -272,10 +267,6 @@ function renderMedicine(item) {
     `;
 }
 
-// ═══════════════════════════════════════════════════════════════
-// FORMAT INFO
-// ═══════════════════════════════════════════════════════════════
-
 function formatInfo(text) {
     if (!text) {
         return '<p>No additional information available.</p>';
@@ -329,9 +320,6 @@ function formatInfo(text) {
     `;
 }
 
-// ═══════════════════════════════════════════════════════════════
-// ERROR CARD
-// ═══════════════════════════════════════════════════════════════
 
 function errorHTML(title, message) {
     return `
@@ -345,9 +333,6 @@ function errorHTML(title, message) {
     `;
 }
 
-// ═══════════════════════════════════════════════════════════════
-// MOBILE MENU
-// ═══════════════════════════════════════════════════════════════
 
 function toggleMobileMenu() {
     document

@@ -1,5 +1,3 @@
-// Core Services page rendering and search.
-
 const TAB_CONFIG = {
     medical: {
         label: 'Medical Terms',
@@ -180,12 +178,8 @@ function openEntryFromKeyboard(event, url) {
 
 function renderEntryMeta(item) {
 
-    // =========================
-    // MEDICINES
-    // =========================
     if (currentTab === 'medicine') {
 
-        // Create short snippet
         const shortDescription =
             String(item.description || '')
                 .split('.')
@@ -217,9 +211,6 @@ function renderEntryMeta(item) {
         `;
     }
 
-    // =========================
-    // SYMPTOMS
-    // =========================
     return `
         <div class="entry-meta">
 

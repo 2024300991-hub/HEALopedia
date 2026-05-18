@@ -12,10 +12,6 @@ let medicines = [];
 let healthCommonSymptoms = [];
 let healthRareSymptoms = [];
 
-// ─────────────────────────────────────────────────────────────
-// FETCH GOOGLE SHEET
-// ─────────────────────────────────────────────────────────────
-
 async function fetchSheet(gid) {
     const url =
         `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:csv&gid=${gid}`;
@@ -31,10 +27,6 @@ async function fetchSheet(gid) {
     return csvToObjects(csv);
 }
 
-// ─────────────────────────────────────────────────────────────
-// SAFE CSV PARSER
-// Handles commas inside quotes properly
-// ─────────────────────────────────────────────────────────────
 
 function csvToObjects(csv) {
     const lines = splitCSVRows(csv)
@@ -137,9 +129,6 @@ function cleanCSVValue(value) {
         .trim();
 }
 
-// ─────────────────────────────────────────────────────────────
-// LOAD DATABASE
-// ─────────────────────────────────────────────────────────────
 
 async function loadDatabase() {
     try {
@@ -148,7 +137,6 @@ async function loadDatabase() {
         healthCommonSymptoms = await fetchSheet(SHEETS.commonSymptoms);
         healthRareSymptoms = await fetchSheet(SHEETS.rareSymptoms);
 
-        // Normalize medicine arrays
         medicines.forEach(m => {
             m.brandNames = toCSVList(m.brandNames);
             m.dosageForms = toCSVList(m.dosageForms);
